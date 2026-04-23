@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Sitio oficial de L. R. Jeffers, autor de Romance Paranormal LGBT">
+  <title>LR Jeffers, Autor de Ficción | Romance LGBT</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/icono.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  
+  <!-- BOTÓN DE SONIDO (siempre visible) -->
+  <button id="sound-toggle" aria-label="Activar/desactivar sonidos" title="Activar/desactivar sonidos">
+    <span id="sound-icon">🔊</span>
+  </button>
+  
+  <!-- BANNER PRINCIPAL -->
+  <header class="hero-banner">
+    <div class="hero-overlay"></div>
+  </header>
+
+  <!-- NAVEGACIÓN -->
+  <nav aria-label="Navegación principal" class="main-nav">
+    <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰ Menú</button>
+    <ul id="menu-list">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="sobre-mi.html">Sobre Mí</a></li>
+      <li><a href="#obras">Obras</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <!-- SECCIÓN INICIO / ÚLTIMO ESTRENO -->
+    <section id="inicio" class="featured-section">
+      <h2>Último Estreno</h2>
+      
+      <div class="featured-book-layout">
+        <div class="book-info">
+          <h3>Crónicas de Raven's Ridge</h3>
+          <p class="book-tagline">Dark Romance con toques de Techno-Thriller y suspenso</p>
+          <p>
+            OBSESIÓN. VIGILANCIA. VENGANZA. En las montañas Blue Ridge, la verdad se paga con sangre y el amor nace en la oscuridad.
+          </p>
+          <p>
+            Bienvenido a Raven's Ridge, un pueblo donde la niebla oculta secretos antiguos y nadie es quien dice ser. Drake Holloway y Killian Graves descubrirán que algunos lazos son más peligrosos que la muerte misma.
+          </p>
+          <div class="book-meta">
+            <span class="genre-tag">Dark Romance</span>
+            <span class="genre-tag">Techno-Thriller</span>
+            <span class="genre-tag">M/M</span>
+          </div>
+          <div class="book-actions">
+            <a href="https://www.amazon.com/dp/B0GX2ZVXMQ" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Comprar Bilogía</a>
+          </div>
+        </div>
+        
+        <div class="featured-banner-container">
+          <a href="https://www.amazon.com/dp/B0GX2ZVXMQ" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/bilogia.png" alt="Crónicas de Raven's Ridge - Bilogía Completa" class="featured-banner">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN OBRAS -->
+    <section id="obras">
+      <h2>Mis Obras</h2>
+      
+      <input type="search" id="search-input" placeholder="Buscar obras, personajes, temas..." aria-label="Buscar en el sitio">
+      <div id="search-results" aria-live="polite"></div>
+      
+      <div class="obras-grid">
+        
+        <!-- LAZOS DE SANGRE -->
+        <div class="obra-card serie-card" data-tags="paranormal romance cambiaformas lazossangre lgbt">
+          <a href="https://www.amazon.com/dp/B08MT8CVVT" target="_blank" rel="noopener noreferrer">
+            <div class="cover-frame">
+              <img src="assets/images/lazos_de_sangre.jpg" alt="Serie Lazos de Sangre" class="obra-cover">
+            </div>
+          </a>
+          <div class="obra-content">
+            <h3>Serie Lazos de Sangre</h3>
+            <p class="obra-tagline">Vínculos inquebrantables en un mundo de sombras</p>
+            <p>
+              ¿Qué sucede cuando tu peor enemigo es el lazo que te une a otro? Lazos de Sangre es una saga de romance paranormal LGBT que explora las profundidades del alma de aquellos que caminan entre dos mundos.
+            </p>
+            <p>
+              A través de historias interconectadas, conocerás a cambiaformas que desafían las leyes de sus manadas y coaliciones para proteger a quienes aman.
+            </p>
+            <div class="serie-libros">
+              <h4>Títulos de la serie:</h4>
+              <ul>
+                <li>Luz de luna carmesí</li>
+                <li>El lobo maldito</li>
+                <li>El corazón de Dante</li>
+                <li>Cazando a Wyatt</li>
+                <li>Una vez al claro de la luna</li>
+                <li>Un baile con el diablo</li>
+              </ul>
+            </div>
+            <div class="book-meta">
+              <span class="genre-tag">Paranormal</span>
+              <span class="genre-tag">Cambiaformas</span>
+              <span class="genre-tag">LGBT</span>
+            </div>
+            <a href="https://www.amazon.com/dp/B08MT8CVVT" target="_blank" rel="noopener noreferrer" class="btn">Ver en Amazon</a>
+          </div>
+        </div>
+
+        <!-- AUTOPISTA AL INFIERNO -->
+        <div class="obra-card" data-tags="autopista infierno rock drama lgbt contemporary">
+          <a href="https://www.amazon.com/dp/B093TJ83NC" target="_blank" rel="noopener noreferrer">
+            <div class="cover-frame">
+              <img src="assets/images/autopista_al-infierno.jpg" alt="Autopista al infierno" class="obra-cover">
+            </div>
+          </a>
+          <div class="obra-content">
+            <h3>Autopista al infierno</h3>
+            <p class="obra-tagline">Cuando el orgullo es el peor enemigo</p>
+            <p>
+              Carlos Narváez lo abandonó todo para ir en busca de su sueño. Junto a su mejor amigo, Alejandro, formó una banda de rock y peleó duro hasta convertirla en la mejor de la década.
+            </p>
+            <p>
+              Cuando Alejandro le confiesa sus verdaderos sentimientos, Carlos entra en crisis. ¿Desde cuándo el corazón roto de su mejor amigo ha sido un problema y no una bendición?
+            </p>
+            <div class="book-meta">
+              <span class="genre-tag">Contemporáneo</span>
+              <span class="genre-tag">Drama</span>
+              <span class="genre-tag">M/M</span>
+            </div>
+            <a href="https://www.amazon.com/dp/B093TJ83NC" target="_blank" rel="noopener noreferrer" class="btn">Ver en Amazon</a>
+          </div>
+        </div>
+
+        <!-- LA MUJER DEL PAKHAN -->
+        <div class="obra-card" data-tags="pakhan mafia rusa romance m/f suspense">
+          <a href="https://www.amazon.com/dp/B0CKBXH5GK" target="_blank" rel="noopener noreferrer">
+            <div class="cover-frame">
+              <img src="assets/images/la_mujer_del_pahan.jpg" alt="La mujer del Pakhan" class="obra-cover">
+            </div>
+          </a>
+          <div class="obra-content">
+            <h3>La mujer del Pakhan</h3>
+            <p class="obra-tagline">Cuando tu enemigo es tu destino</p>
+            <p>
+              Rachel Williams es una reconocida periodista que decide infiltrarse en la Solntsevskaya Bratva para obtener su gran historia. Pero al ser capturada, descubre que la persona a la que desea hundir es su pareja destinada.
+            </p>
+            <p>
+              Rachel no quiere nada de esto. ¿Cómo podría renunciar a sus ideales de justicia para unirse a un criminal sangriento? Quizás demasiado tarde, descubrirá que no puede huir de su destino.
+            </p>
+            <div class="book-meta">
+              <span class="genre-tag">Mafia</span>
+              <span class="genre-tag">Suspense</span>
+              <span class="genre-tag">M/F</span>
+            </div>
+            <a href="https://www.amazon.com/dp/B0CKBXH5GK" target="_blank" rel="noopener noreferrer" class="btn">Ver en Amazon</a>
+          </div>
+        </div>
+
+        <!-- ESO QUE LLAMAMOS CASUALIDADES -->
+        <div class="obra-card" data-tags="casualidades drama contemporaneo romance familia">
+          <a href="https://www.amazon.com/dp/B07KN1MPY6" target="_blank" rel="noopener noreferrer">
+            <div class="cover-frame">
+              <img src="assets/images/casualidades.jpg" alt="Eso que llamamos casualidades" class="obra-cover">
+            </div>
+          </a>
+          <div class="obra-content">
+            <h3>Eso que llamamos casualidades</h3>
+            <p class="obra-tagline">A veces el destino nos empuja para enseñarnos a nadar</p>
+            <p>
+              Adrián Ramírez no cree en las casualidades. Con su mundo derrumbándose, rentas atrasadas y un corazón roto, piensa que alguna fuerza superior está en su contra.
+            </p>
+            <p>
+              Sin embargo, la tarde en la que se encuentra con un bebé tirado en el basurero, Adrián se da cuenta de que la vida es mucho más que un juego de dados.
+            </p>
+            <div class="book-meta">
+              <span class="genre-tag">Contemporáneo</span>
+              <span class="genre-tag">Drama Familiar</span>
+              <span class="genre-tag">Romance</span>
+            </div>
+            <a href="https://www.amazon.com/dp/B07KN1MPY6" target="_blank" rel="noopener noreferrer" class="btn">Ver en Amazon</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- LIBROS INDIVIDUALES DE RAVEN'S RIDGE -->
+      <h3 style="margin-top: 4rem; margin-bottom: 2rem; text-align: center;">Crónicas de Raven's Ridge - Libros Individuales</h3>
+      
+      <div class="obras-grid">
+        
+        <!-- LA SOMBRA DEL CUERVO -->
+        <div class="obra-card" data-tags="ravensridge sombra cuervo libro1 dark romance techno-thriller m/m">
+          <a href="https://www.amazon.com/dp/B0GX7GC1M5" target="_blank" rel="noopener noreferrer">
+            <div class="cover-frame">
+              <img src="assets/images/la_sombra_del_cuervo.jpg" alt="La sombra del cuervo - Libro 1" class="obra-cover">
+            </div>
+          </a>
+          <div class="obra-content">
+            <h3>La sombra del cuervo</h3>
+            <p class="obra-tagline">Libro 1 de Crónicas de Raven's Ridge</p>
+            <p>
+              Drake lo observa desde la oscuridad. Killian siente su mirada. Cuando Killian es acusado de secuestro y asesinato, su única esperanza es una voz distorsionada al teléfono y un hacker que se niega a mostrar su rostro.
+            </p>
+            <p>
+              Entre extorsiones, vigilancia ilegal y una atracción prohibida, Drake romperá sus propias reglas para proteger lo único que le importa, aunque eso signifique exponerse a los demonios de su pasado.
+            </p>
+            <p class="question-highlight">¿Te enamorarías de quien te acecha si es el único que puede salvarte?</p>
+            <div class="book-meta">
+              <span class="genre-tag">Dark Romance</span>
+              <span class="genre-tag">Techno-Thriller</span>
+              <span class="genre-tag">M/M</span>
+            </div>
+            <a href="https://www.amazon.com/dp/B0GX7GC1M5" target="_blank" rel="noopener noreferrer" class="btn">Ver en Amazon</a>
+          </div>
+        </div>
+
+        <!-- MISA DE CENIZA -->
+        <div class="obra-card" data-tags="ravensridge misa ceniza libro2 dark romance techno-thriller m/m">
+          <a href="https://www.amazon.com/dp/B0GX32TZWP" target="_blank" rel="noopener noreferrer">
+            <div class="cover-frame">
+              <img src="assets/images/misa_de_ceniza.jpg" alt="Misa de ceniza - Libro 2" class="obra-cover">
+            </div>
+          </a>
+          <div class="obra-content">
+            <h3>Misa de ceniza</h3>
+            <p class="obra-tagline">Libro 2 de Crónicas de Raven's Ridge</p>
+            <p>
+              El ritual ha comenzado. La identidad del asesino está más cerca de lo que imaginan. Con un embarazo de riesgo, el FBI cerrando el cerco y un pueblo sediento de sangre, Drake y Killian se enfrentan al juicio final.
+            </p>
+            <p>
+              La leyenda de la Misa de Ceniza exige fuego, ojos y lenguas. Para salvar a su nueva familia, Drake tendrá que dejar de ser un fantasma y enfrentarse al monstruo que él mismo ayudó a crear.
+            </p>
+            <div class="book-meta">
+              <span class="genre-tag">Dark Romance</span>
+              <span class="genre-tag">Techno-Thriller</span>
+              <span class="genre-tag">M/M</span>
+            </div>
+            <a href="https://www.amazon.com/dp/B0GX32TZWP" target="_blank" rel="noopener noreferrer" class="btn">Ver en Amazon</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN BLOG -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <p>Próximamente: reflexiones, avances y más.</p>
+    </section>
+
+        <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p class="contact-intro">
+        ¿Tienes alguna duda, sugerencia, propuesta editorial o quieres saludar? 
+        Escríbeme y te responderé lo antes posible.
+      </p>
+      
+      <div class="contact-form-wrapper">
+        <form id="contact-form" action="https://formspree.io/f/xaqaaypo" method="POST">
+          <div class="form-group">
+            <label for="nombre">NOMBRE COMPLETO</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Ramón López" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">CORREO ELECTRÓNICO</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="mensaje">TU MENSAJE</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-submit">ENVIAR MENSAJE</button>
+        </form>
+      </div>
+      
+      <p class="form-note">
+        🔒 Tus datos están protegidos. No compartimos tu información con terceros.
+      </p>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.facebook.com/LRJeffers1" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lrjeffers90" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/c/LRJeffers90" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://www.tiktok.com/@lrj_90t" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://whatsapp.com/channel/0029Vb7kOJt9Bb5wiQfIgn0q" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.goodreads.com/lrjeffers90" target="_blank" rel="noopener noreferrer">Goodreads</a>
+      </div>
+      
+      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados.</p>
+      <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

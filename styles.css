@@ -1,0 +1,786 @@
+/* Paleta oscura - estilo "Círculo Oscuro" */
+:root {
+  --fondo: #0a0a0a;
+  --texto: #e0e0e0;
+  --acento: #6b1c23;
+  --acento-hover: #8a2a2f;
+  --borde: #333;
+  --rojo-brillante: #dc2626;
+  --banner-overlay: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Tipografía actualizada */
+h1, h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f5f5f5;
+  margin-bottom: 1rem;
+}
+
+h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #e0e0e0;
+}
+
+a, button, input, label, .btn {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* BANNER HERO - RESPONSIVE */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url('assets/images/banner.png');
+  background-size: contain; /* CAMBIO: se ve completo sin cortar */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0a0a0a; /* Fondo negro por si queda espacio */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--banner-overlay);
+}
+
+/* NAVEGACIÓN */
+.main-nav {
+  background: #111;
+  padding: 1rem;
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#menu-toggle {
+  display: none;
+  background: var(--acento);
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+#menu-toggle:hover {
+  background: var(--acento-hover);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--texto);
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+.main-nav a:hover {
+  color: var(--acento-hover);
+  border-bottom: 2px solid var(--acento);
+}
+
+/* Secciones */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+/* SECCIÓN DESTACADA (Último estreno) */
+.featured-section {
+  background: transparent;
+}
+
+/* Layout del featured: texto izquierda, banner derecha */
+.featured-book-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.book-info {
+  flex: 1;
+  max-width: 600px;
+}
+
+.book-info h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-tagline {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  color: var(--acento-hover);
+  margin-bottom: 1rem;
+}
+
+.book-info p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+/* Banner de bilogía escalado */
+.featured-banner-container {
+  flex-shrink: 0;
+  width: 400px;
+}
+
+.featured-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.featured-banner:hover {
+  transform: scale(1.02);
+}
+
+.book-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.genre-tag {
+  background: var(--acento);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+.book-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--acento);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--acento-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 28, 35, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--texto);
+  border: 2px solid var(--borde);
+}
+
+.btn-secondary:hover {
+  background: var(--borde);
+  color: white;
+}
+
+/* Perfil de autor - VERSIÓN COMPLETA (sobre-mi.html) */
+.about-section-full {
+  background: transparent;
+}
+
+.author-profile-large {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  background: #111;
+  padding: 3rem;
+  border-radius: 8px;
+  border: 1px solid var(--borde);
+  margin-top: 2rem;
+}
+
+.author-photo-large {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--acento);
+  flex-shrink: 0;
+}
+
+.author-bio-large h2 {
+  margin-top: 0;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.author-bio-large .bio-text {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.author-social {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--borde);
+}
+
+.author-social h3 {
+  margin-bottom: 1rem;
+}
+
+/* Grid de obras */
+.obras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* Tarjetas de obras */
+.obra-card {
+  background: #111;
+  border-radius: 8px;
+  border: 1px solid var(--borde);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.obra-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* MARCO ROJO ESTILO PASSEPARTOUT */
+.cover-frame {
+  background-color: var(--rojo-brillante);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.cover-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.25);
+}
+
+.obra-cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5/8;
+  object-fit: cover;
+  display: block;
+  border-radius: 3px;
+}
+
+.obra-content {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.obra-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.obra-tagline {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  color: var(--acento-hover);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.obra-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Pregunta destacada */
+.question-highlight {
+  font-style: italic;
+  color: var(--acento-hover);
+  border-left: 3px solid var(--acento);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Lista de libros en series */
+.serie-libros {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  border-left: 3px solid var(--acento);
+}
+
+.serie-libros h4 {
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 0.8rem;
+  color: var(--acento-hover);
+}
+
+.serie-libros ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.serie-libros li {
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.serie-libros li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--acento);
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 400px;
+}
+
+input[type="email"], input[type="search"] {
+  padding: 0.8rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background: #111;
+  color: var(--texto);
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input:focus {
+  outline: 2px solid var(--acento);
+  border-color: transparent;
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+/* Resultados de búsqueda */
+#search-results {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background: #111;
+  min-height: 50px;
+}
+
+#search-results .obra-card {
+  margin-bottom: 1rem;
+}
+
+/* PIE DE PÁGINA CON IMAGEN */
+.site-footer {
+  position: relative;
+  background-image: url('assets/images/pie_de_pagina.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  color: #f5f5f5;
+}
+
+.footer-content p {
+  margin: 0.5rem 0;
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Enlaces de redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: var(--texto);
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.social-links a:hover {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* MENÚ MÓVIL */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+  
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--borde);
+  }
+  
+  .main-nav ul.active {
+    display: flex;
+  }
+  
+  .main-nav li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-nav a {
+    display: block;
+    padding: 0.8rem;
+  }
+  
+  /* Banner móvil - AHORA SE VE COMPLETO */
+  .hero-banner {
+    height: auto;
+    min-height: 300px;
+    max-height: 500px;
+    background-size: contain;
+    padding: 2rem 0;
+  }
+  
+  /* Featured layout móvil */
+  .featured-book-layout {
+    flex-direction: column;
+  }
+  
+  .featured-banner-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .book-info {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .book-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  /* Autor móvil */
+  .author-profile-large {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .author-photo-large {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .author-bio-large h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  /* Obras grid móvil */
+  .obras-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .cover-frame {
+    padding: 8px;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .social-links a {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  main {
+    padding: 0 1rem;
+  }
+}
+
+/* Accesibilidad: salto de contenido */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--acento);
+  color: white;
+  padding: 0.5rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}/* ==================== BOTÓN DE SONIDO ==================== */
+#sound-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: var(--acento);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#sound-toggle:hover {
+  background: var(--acento-hover);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(107, 28, 35, 0.5);
+}
+
+#sound-toggle:focus {
+  outline: 3px solid var(--texto);
+  outline-offset: 3px;
+}
+
+/* En móvil, mover el botón para que no tape el menú */
+@media (max-width: 768px) {
+  #sound-toggle {
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}/* ==================== FORMULARIO DE CONTACTO ==================== */
+.contact-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--texto);
+}
+
+.contact-form-wrapper {
+  background: #111;
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+  padding: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #1a1a1a;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  color: var(--texto);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--acento);
+  box-shadow: 0 0 0 3px rgba(107, 28, 35, 0.2);
+  background: #111;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1.2rem;
+  background: #0f2528;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: var(--acento);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107, 28, 35, 0.4);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.form-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+  
+  .contact-intro {
+    font-size: 1rem;
+  }
+}
