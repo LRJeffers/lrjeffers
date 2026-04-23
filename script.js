@@ -3,7 +3,6 @@ let soundEnabled = false;
 let sounds = {};
 let soundsLoaded = false;
 
-// Cargar sonidos al iniciar
 function loadSounds() {
   console.log('🔊 Cargando sonidos...');
   
@@ -14,10 +13,9 @@ function loadSounds() {
       submit: new Audio('assets/sounds/submit.mp3')
     };
     
-    // Configurar eventos de carga
     Object.keys(sounds).forEach(key => {
       sounds[key].addEventListener('canplaythrough', () => {
-        console.log(`✅ Sonido "${key}" cargado correctamente`);
+        console.log(`✅ Sonido "${key}" cargado`);
       });
       
       sounds[key].addEventListener('error', (e) => {
@@ -25,92 +23,57 @@ function loadSounds() {
       });
     });
     
-    // VOLUMEN MÁS ALTO (70%)
     Object.values(sounds).forEach(sound => {
-      sound.volume = 0.7; // 70% de volumen (mucho más audible)
+      sound.volume = 0.7;
     });
     
     soundsLoaded = true;
-    console.log('🎵 Todos los sonidos inicializados');
   } catch (error) {
     console.error('Error al cargar sonidos:', error);
   }
 }
 
-// Función para reproducir sonido
 function playSound(soundName) {
-  if (!soundEnabled) {
-    console.log(`🔇 Sonido "${soundName}" desactivado`);
-    return;
-  }
+  if (!soundEnabled) return;
   
   if (!soundsLoaded) {
-    console.log('⚠️ Sonidos no cargados aún');
     loadSounds();
     return;
   }
   
   if (sounds[soundName]) {
-    console.log(`🎵 Reproduciendo: ${soundName}`);
-    
-    // Clonar el audio para poder reproducirlo múltiples veces
     const sound = sounds[soundName].cloneNode();
     sound.volume = 0.7;
-    
-    sound.play().then(() => {
-      console.log(`✅ "${soundName}" reproducido`);
-    }).catch(error => {
-      console.error(`❌ Error reproduciendo "${soundName}":`, error);
-    });
-  } else {
-    console.warn(`⚠️ Sonido "${soundName}" no existe`);
+    sound.play().catch(error => console.error('Error:', error));
   }
 }
 
-// Botón de activar/desactivar sonidos
 const soundToggle = document.getElementById('sound-toggle');
 const soundIcon = document.getElementById('sound-icon');
 
 if (soundToggle) {
-  console.log('🔘 Botón de sonido encontrado');
-  
   soundToggle.addEventListener('click', () => {
     soundEnabled = !soundEnabled;
     
     if (soundEnabled) {
-      console.log('🔊 Sonidos ACTIVADOS');
       soundIcon.textContent = '🔊';
-      
-      if (!soundsLoaded) {
-        loadSounds();
-      }
-      
-      // Probar sonido
+      if (!soundsLoaded) loadSounds();
       setTimeout(() => playSound('click'), 100);
     } else {
-      console.log('🔇 Sonidos DESACTIVADOS');
       soundIcon.textContent = '🔇';
     }
     
-    soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonidos' : 'Activar sonidos');
-    
-    // Guardar preferencia
     localStorage.setItem('soundEnabled', soundEnabled);
   });
   
-  // Cargar preferencia guardada
   const savedPreference = localStorage.getItem('soundEnabled');
   if (savedPreference === 'true') {
-    console.log('🔊 Cargando preferencia: sonidos activados');
     soundEnabled = true;
     soundIcon.textContent = '🔊';
     loadSounds();
   } else {
     soundIcon.textContent = '🔇';
-    console.log('🔇 Sonidos desactivados por defecto');
   }
-} else {
-  console.warn('⚠️ Botón de sonido NO encontrado en el HTML');
 }
 
 // ==================== MENÚ MÓVIL ====================
@@ -122,40 +85,57 @@ if (menuToggle && menuList) {
     menuList.classList.toggle('active');
     const isExpanded = menuList.classList.contains('active');
     menuToggle.setAttribute('aria-expanded', isExpanded);
-    if (isExpanded) {
-      menuToggle.textContent = '✕ Cerrar';
-    } else {
-      menuToggle.textContent = '☰ Menú';
-    }
+    menuToggle.textContent = isExpanded ? '✕ Cerrar' : '☰ Menú';
     playSound('click');
   });
 }
 
-// ==================== BOTONES Y ENLACES CON SONIDO ====================
+// ==================== BOTONES CON SONIDO ====================
 document.querySelectorAll('button, .btn, a').forEach(element => {
-  // Hover sound (solo en desktop)
   if (window.matchMedia('(hover: hover)').matches) {
-    element.addEventListener('mouseenter', () => {
-      playSound('hover');
-    });
+    element.addEventListener('mouseenter', () => playSound('hover'));
   }
-  
-  // Click sound
-  element.addEventListener('click', () => {
-    playSound('click');
-  });
+  element.addEventListener('click', () => playSound('click'));
 });
 
-// ==================== FORMULARIO CON SONIDO ====================
-const newsletterForm = document.getElementById('newsletter-form');
-if (newsletterForm) {
-  newsletterForm.addEventListener('submit', async (e) => {
-    console.log('📧 Formulario enviado');
-    playSound('submit');
+// ==================== FORMULARIO DE CONTACTO (CON FETCH) ====================
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(contactForm);
+    const formAction = contactForm.getAttribute('action');
+    
+    // Agregar _next manualmente
+    formData.append('_next', 'https://lrjeffers.github.io/gracias.html');
+    
+    try {
+      const response = await fetch(formAction, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        playSound('submit');
+        // Esperar 500ms y redirigir
+        setTimeout(() => {
+          window.location.href = 'https://lrjeffers.github.io/gracias.html';
+        }, 500);
+      } else {
+        alert('Hubo un error al enviar. Por favor, intenta de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Hubo un error al enviar. Por favor, intenta de nuevo.');
+    }
   });
 }
 
-// ==================== BÚSQUEDA EN TIEMPO REAL ====================
+// ==================== BÚSQUEDA ====================
 const searchInput = document.getElementById('search-input');
 const searchResults = document.getElementById('search-results');
 const obras = document.querySelectorAll('.obra-card');
@@ -184,51 +164,5 @@ if (searchInput && searchResults) {
       const clone = obra.cloneNode(true);
       searchResults.appendChild(clone);
     });
-  });
-}
-
-// ==================== MENSAJE DE INICIO ====================
-console.log(' Sitio de L. R. Jeffers cargado');
-console.log('🎵 Sistema de sonidos listo');
-console.log('💡 Haz clic en el botón 🔇 (abajo a la derecha) para activar sonidos');
-console.log('🔍 Abre la consola (F12) para ver diagnósticos');
-// ==================== FORMULARIO DE CONTACTO ====================
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    console.log('📧 Formulario de contacto enviado');
-    playSound('submit');
-  });
-// ==================== FORMULARIO DE CONTACTO CON REDIRECCIÓN ====================
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Prevenir envío normal
-    
-    const formData = new FormData(contactForm);
-    const formAction = contactForm.getAttribute('action');
-    
-    try {
-      // Enviar formulario con fetch
-      const response = await fetch(formAction, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      
-      if (response.ok) {
-        // Éxito: redirigir a gracias.html
-        playSound('submit');
-        window.location.href = 'https://lrjeffers.github.io/gracias.html';
-      } else {
-        // Error
-        alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
-    }
   });
 }
