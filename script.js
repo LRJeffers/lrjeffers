@@ -199,4 +199,36 @@ if (contactForm) {
     console.log('📧 Formulario de contacto enviado');
     playSound('submit');
   });
+// ==================== FORMULARIO DE CONTACTO CON REDIRECCIÓN ====================
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevenir envío normal
+    
+    const formData = new FormData(contactForm);
+    const formAction = contactForm.getAttribute('action');
+    
+    try {
+      // Enviar formulario con fetch
+      const response = await fetch(formAction, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Éxito: redirigir a gracias.html
+        playSound('submit');
+        window.location.href = 'https://lrjeffers.github.io/gracias.html';
+      } else {
+        // Error
+        alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+    }
+  });
 }
