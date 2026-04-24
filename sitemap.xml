@@ -1,7 +1,21 @@
-<!-- ANTES -->
-<loc>https://lrjeffers.github.io/lrjeffers/</loc>
-<loc>https://lrjeffers.github.io/lrjeffers/sobre-mi.html</loc>
-
-<!-- AHORA -->
-<loc>https://lrjeffers.github.io/</loc>
-<loc>https://lrjeffers.github.io/sobre-mi.html</loc>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lrjeffers.github.io/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lrjeffers.github.io/sobre-mi.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lrjeffers.github.io/gracias.html</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
