@@ -190,6 +190,11 @@
     <span id="sound-icon">🔊</span>
   </button>
   
+  <!-- SONIDOS -->
+  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
+  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
+  <audio id="sound-page-load" src="assets/sounds/page-load.mp3" preload="auto"></audio>
+  
   <!-- BANNER PRINCIPAL -->
   <header class="hero-banner">
     <div class="hero-overlay"></div>
@@ -303,6 +308,63 @@
     </div>
   </footer>
 
+  <!-- ==================== SCRIPT DE SONIDOS ==================== -->
   <script src="script.js"></script>
+  <script>
+    // Sistema de sonidos específico para esta página
+    document.addEventListener('DOMContentLoaded', () => {
+      const soundHover = document.getElementById('sound-hover');
+      const soundClick = document.getElementById('sound-click');
+      const soundPageLoad = document.getElementById('sound-page-load');
+      const soundToggle = document.getElementById('sound-toggle');
+      const soundIcon = document.getElementById('sound-icon');
+      const menuToggle = document.getElementById('menu-toggle');
+      
+      let soundEnabled = true;
+      
+      // Reproducir sonido de carga de página
+      if (soundPageLoad && soundEnabled) {
+        soundPageLoad.volume = 0.3;
+        soundPageLoad.play().catch(() => {});
+      }
+      
+      // Toggle de sonido
+      soundToggle.addEventListener('click', () => {
+        soundEnabled = !soundEnabled;
+        soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
+        soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonidos' : 'Activar sonidos');
+      });
+      
+      // Sonidos en botones de redes sociales
+      document.querySelectorAll('.social-btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          if (soundEnabled && soundHover) {
+            soundHover.currentTime = 0;
+            soundHover.volume = 0.4;
+            soundHover.play().catch(() => {});
+          }
+        });
+        
+        btn.addEventListener('click', () => {
+          if (soundEnabled && soundClick) {
+            soundClick.currentTime = 0;
+            soundClick.volume = 0.6;
+            soundClick.play().catch(() => {});
+          }
+        });
+      });
+      
+      // Sonido en botón de menú
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          if (soundEnabled && soundClick) {
+            soundClick.currentTime = 0;
+            soundClick.volume = 0.6;
+            soundClick.play().catch(() => {});
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

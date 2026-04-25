@@ -46,7 +46,7 @@
     "@type": "Person",
     "name": "L. R. Jeffers",
     "url": "https://lrjeffers.github.io/",
-    "image": "https://lrjeffers.github.io/assets/images/icono.png",
+    "image": "https://lrjeffers.github.io/assets/images/perfil_autor.jpg",
     "description": "L. R. Jeffers (Caracas, 1990) es escritor queer autodidacta especializado en Romance Paranormal, novela erótica y literatura LGBT.",
     "jobTitle": "Autor de Ficción",
     "sameAs": [
@@ -231,6 +231,11 @@
 </head>
 <body>
   
+  <!-- SONIDOS -->
+  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
+  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
+  <audio id="sound-page-load" src="assets/sounds/page-load.mp3" preload="auto"></audio>
+  
   <div class="gracias-container">
     <h1>¡Bienvenido al Círculo Oscuro! 🖤</h1>
     
@@ -291,25 +296,62 @@
     </a>
   </div>
 
-  <!-- Script para copiar enlace -->
+  <!-- Script para copiar enlace y sonidos -->
   <script>
-    document.getElementById('copyLinkBtn').addEventListener('click', async () => {
-      const url = window.location.href;
-      const btn = document.getElementById('copyLinkBtn');
-      const textSpan = document.getElementById('copyText');
+    document.addEventListener('DOMContentLoaded', () => {
+      const soundHover = document.getElementById('sound-hover');
+      const soundClick = document.getElementById('sound-click');
+      const soundPageLoad = document.getElementById('sound-page-load');
       
-      try {
-        await navigator.clipboard.writeText(url);
-        textSpan.textContent = '¡Enlace copiado!';
-        btn.classList.add('copied');
+      let soundEnabled = true;
+      
+      // Reproducir sonido de carga de página
+      if (soundPageLoad && soundEnabled) {
+        soundPageLoad.volume = 0.3;
+        soundPageLoad.play().catch(() => {});
+      }
+      
+      // Sonidos en botones de compartir
+      document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+          if (soundEnabled && soundHover) {
+            soundHover.currentTime = 0;
+            soundHover.volume = 0.4;
+            soundHover.play().catch(() => {});
+          }
+        });
         
-        setTimeout(() => {
-          textSpan.textContent = 'Copiar enlace';
-          btn.classList.remove('copied');
-        }, 2000);
-      } catch (err) {
-        textSpan.textContent = 'Error al copiar';
-        console.error('Error al copiar:', err);
+        btn.addEventListener('click', () => {
+          if (soundEnabled && soundClick) {
+            soundClick.currentTime = 0;
+            soundClick.volume = 0.6;
+            soundClick.play().catch(() => {});
+          }
+        });
+      });
+      
+      // Función para copiar enlace
+      const copyBtn = document.getElementById('copyLinkBtn');
+      const copyText = document.getElementById('copyText');
+      
+      if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+          const url = window.location.href;
+          
+          try {
+            await navigator.clipboard.writeText(url);
+            copyText.textContent = '¡Enlace copiado!';
+            copyBtn.classList.add('copied');
+            
+            setTimeout(() => {
+              copyText.textContent = 'Copiar enlace';
+              copyBtn.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            copyText.textContent = 'Error al copiar';
+            console.error('Error al copiar:', err);
+          }
+        });
       }
     });
   </script>
