@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="styles.css" />
   
   <!-- ==================== SCHEMA.ORG - BOOK ==================== -->
+  <!-- NOTA PARA FUTURO: Cuando haya Vol. 2, agregar "bookSeries" con position: 1 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -198,13 +199,36 @@
       text-indent: 2rem;
     }
     
+    /* NOTA DEL EXTRACTO - ACTUALIZADA */
     .excerpt-note {
-      font-size: 0.85rem;
-      color: #777;
+      font-size: 0.95rem;
+      color: #aaa;
       font-style: italic;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       padding-top: 1rem;
       border-top: 1px dashed #444;
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .excerpt-note a {
+      color: #ff3b3b; /* Rojo brillante */
+      font-weight: 700;
+      font-size: 1.15rem; /* Más grande */
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+    
+    .excerpt-note a:hover {
+      color: #ff6b6b;
+      background: rgba(255, 59, 59, 0.1);
+      transform: scale(1.05);
+      text-decoration: none;
     }
     
     /* Bonus Section - Coming Soon */
@@ -254,7 +278,7 @@
       font-size: 0.95rem;
     }
     
-    /* Botón de regreso a obras */
+    /* Botón de regreso a obras (para libros independientes/serie en desarrollo) */
     .back-to-works {
       display: inline-block;
       margin-top: 3rem;
@@ -271,32 +295,6 @@
     .back-to-works:hover {
       background: #6b1c23;
       color: #fff;
-    }
-
-    /* ==================== BREADCRUMBS ==================== */
-    .breadcrumbs-book {
-      margin-bottom: 1rem;
-      font-size: 0.85rem;
-      color: #777;
-      font-family: 'Montserrat', sans-serif;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid #333;
-    }
-    
-    .breadcrumbs-book a {
-      color: #8a2a2f;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    
-    .breadcrumbs-book a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-    
-    .breadcrumbs-book span {
-      margin: 0 0.4rem;
-      color: #555;
     }
     
     /* Responsive */
@@ -318,8 +316,8 @@
         flex-direction: column;
         text-align: center;
       }
-      .breadcrumbs-book {
-        font-size: 0.8rem;
+      .excerpt-note a {
+        font-size: 1.05rem;
       }
     }
   </style>
@@ -361,16 +359,6 @@
         <div class="book-info">
           <span class="book-series">Las mujeres de la mafia #1</span>
           <h1>La mujer del Pakhan</h1>
-
-          <!-- BREADCRUMBS -->
-          <nav aria-label="Ruta de navegación" class="breadcrumbs-book">
-            <a href="index.html">Inicio</a> 
-            <span aria-hidden="true">/</span> 
-            <a href="index.html#obras">Obras</a>
-            <span aria-hidden="true">/</span> 
-            <span aria-current="page">La mujer del Pakhan</span>
-          </nav>
-          
           <p class="book-tagline">«Cuando el destino te une al demonio que juraste destruir.»</p>
           
           <div class="book-meta-tags">
@@ -576,7 +564,10 @@
           </p>
           
           <p class="excerpt-note">
-            💡 Este prólogo representa una muestra del tono oscuro de la novela. Para continuar la historia, <a href="https://www.amazon.com/dp/B0CKBXH5GK" target="_blank" rel="noopener noreferrer" style="color: #8a2a2f;">disponible en Amazon</a>.
+            💡 Este prólogo representa una muestra del tono oscuro de la novela. Para continuar la historia, 
+            <a href="https://www.amazon.com/dp/B0CKBXH5GK" target="_blank" rel="noopener noreferrer">
+              disponible en Amazon →
+            </a>
           </p>
         </div>
       </section>

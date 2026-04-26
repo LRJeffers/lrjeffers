@@ -203,13 +203,36 @@
       text-indent: 2rem;
     }
     
+    /* NOTA DEL EXTRACTO - ACTUALIZADA */
     .excerpt-note {
-      font-size: 0.85rem;
-      color: #777;
+      font-size: 0.95rem;
+      color: #aaa;
       font-style: italic;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       padding-top: 1rem;
       border-top: 1px dashed #444;
+      text-align: center;
+      line-height: 1.6;
+    }
+    
+    .excerpt-note a {
+      color: #ff3b3b; /* Rojo brillante */
+      font-weight: 700;
+      font-size: 1.15rem; /* Más grande */
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+    
+    .excerpt-note a:hover {
+      color: #ff6b6b;
+      background: rgba(255, 59, 59, 0.1);
+      transform: scale(1.05);
+      text-decoration: none;
     }
     
     /* Bonus Section - Coming Soon */
@@ -259,7 +282,7 @@
       font-size: 0.95rem;
     }
     
-    /* Botón de regreso a obras */
+    /* Botón de regreso a obras (para libros independientes/serie en desarrollo) */
     .back-to-works {
       display: inline-block;
       margin-top: 3rem;
@@ -277,7 +300,7 @@
       background: #6b1c23;
       color: #fff;
     }
-
+    
     /* ==================== BREADCRUMBS ==================== */
     .breadcrumbs-book {
       margin-bottom: 1rem;
@@ -325,6 +348,9 @@
       }
       .breadcrumbs-book {
         font-size: 0.8rem;
+      }
+      .excerpt-note a {
+        font-size: 1.05rem;
       }
     }
   </style>
@@ -476,7 +502,10 @@
           </p>
           
           <p class="excerpt-note">
-            💡 Este prólogo representa una muestra del tono crudo y emocional de la novela. Para continuar la historia, <a href="https://www.amazon.com/dp/B093TJ83NC" target="_blank" rel="noopener noreferrer" style="color: #8a2a2f;">disponible en Amazon</a>.
+            💡 Este prólogo representa una muestra del tono crudo y emocional de la novela. Para continuar la historia, 
+            <a href="https://www.amazon.com/dp/B093TJ83NC" target="_blank" rel="noopener noreferrer">
+              disponible en Amazon →
+            </a>
           </p>
         </div>
       </section>
