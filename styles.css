@@ -1041,50 +1041,25 @@ input:focus {
   }
 }
 /* ==================== ACORDEÓN "LEER MÁS" ==================== */
-@media (max-width: 1024px) {
-  /* Contenedores colapsables */
-  .synopsis.collapsible,
-  .excerpt-box.collapsible,
-  .character-bio.collapsible {
-    max-height: 250px;
-    overflow: hidden;
-    position: relative;
-    transition: max-height 0.5s ease-in-out;
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.btn-expand');
   
-  /* Cuando está expandido */
-  .synopsis.collapsible.expanded,
-  .excerpt-box.collapsible.expanded,
-  .character-bio.collapsible.expanded {
-    max-height: 5000px; /* Suficiente para cualquier contenido */
-  }
-  
-  /* Botón visible solo en móvil/tablet */
-  .btn-expand {
-    display: block !important;
-    width: 100%;
-    padding: 0.8rem;
-    background: #1a1a1a;
-    border: 1px solid #333;
-    color: #8a2a2f;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-expand:hover {
-    background: #6b1c23;
-    color: #fff;
-  }
-}
-
-/* Ocultar en desktop */
-@media (min-width: 1025px) {
-  .btn-expand {
-    display: none !important;
-  }
-}
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const container = this.closest('.synopsis, .excerpt-box, .character-bio');
+      
+      if (container) {
+        container.classList.toggle('expanded');
+        
+        if (container.classList.contains('expanded')) {
+          this.textContent = 'Leer menos ▲';
+        } else {
+          this.textContent = 'Leer más ▼';
+        }
+      }
+    });
+  });
+});

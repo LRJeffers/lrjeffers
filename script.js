@@ -40,48 +40,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
-
-/* ==================== ACORDEÓN "LEER MÁS" - FUNCIONA SIEMPRE ==================== */
-function initCollapsible() {
-  const buttons = document.querySelectorAll('.btn-expand');
+/* ==================== ACORDEÓN "LEER MÁS" - FORZADO ==================== */
+@media (max-width: 1024px) {
+  /* FORZAR colapso en móvil */
+  .synopsis.collapsible {
+    max-height: 200px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
   
-  buttons.forEach(btn => {
-    // Remover listeners previos para evitar duplicados
-    const newBtn = btn.cloneNode(true);
-    btn.parentNode.replaceChild(newBtn, btn);
-    
-    // Agregar nuevo listener
-    newBtn.addEventListener('click', function() {
-      const container = this.closest('.synopsis, .excerpt-box, .character-bio');
-      
-      if (container) {
-        // Alternar clase expanded
-        container.classList.toggle('expanded');
-        this.classList.toggle('expanded');
-        
-        // Cambiar texto
-        if (container.classList.contains('expanded')) {
-          this.textContent = 'Leer menos ▲';
-        } else {
-          this.textContent = 'Leer más ▼';
-          // Scroll suave hacia arriba del contenedor
-          setTimeout(() => {
-            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 100);
-        }
-      }
-    });
-  });
+  .excerpt-box.collapsible {
+    max-height: 300px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  
+  .character-bio.collapsible {
+    max-height: 250px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  
+  /* Cuando está expandido */
+  .synopsis.collapsible.expanded,
+  .excerpt-box.collapsible.expanded,
+  .character-bio.collapsible.expanded {
+    max-height: 5000px !important;
+  }
+  
+  /* Botón */
+  .btn-expand {
+    display: block !important;
+    width: 100%;
+    padding: 0.8rem;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #8a2a2f;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 4px;
+  }
+  
+  .btn-expand:hover {
+    background: #6b1c23;
+    color: #fff;
+  }
 }
 
-// Inicializar al cargar la página
-document.addEventListener('DOMContentLoaded', initCollapsible);
-
-// Re-inicializar al redimensionar la ventana
-let resizeTimer;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    initCollapsible();
-  }, 250);
-});
+/* Desktop: ocultar botón */
+@media (min-width: 1025px) {
+  .btn-expand {
+    display: none !important;
+  }
+}
