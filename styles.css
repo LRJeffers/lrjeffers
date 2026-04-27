@@ -899,3 +899,192 @@ input:focus {
     font-size: 0.8rem;
   }
 }
+/* ==================== RESPONSIVE MEJORADO + ACORDEÓN "LEER MÁS" ==================== */
+
+/* Ajustes generales para móvil */
+@media (max-width: 768px) {
+  .book-page, .press-container, .legal-container, .about-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .book-hero {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .book-cover img {
+    max-width: 220px;
+  }
+  
+  .book-info h1 {
+    font-size: 1.6rem;
+  }
+  
+  .book-tagline {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+  }
+  
+  .excerpt-box, .bonus-section, .bio-box, .character-bio {
+    padding: 1.2rem;
+  }
+  
+  .character-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .character-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ==================== ACORDEÓN "LEER MÁS" (solo móvil) ==================== */
+@media (max-width: 768px) {
+  /* Contenedores con límite de altura */
+  .synopsis.collapsible,
+  .excerpt-box.collapsible,
+  .character-bio.collapsible {
+    max-height: 220px; /* Altura visible inicial */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.4s ease;
+  }
+  
+  /* Estado expandido */
+  .synopsis.collapsible.expanded,
+  .excerpt-box.collapsible.expanded,
+  .character-bio.collapsible.expanded {
+    max-height: 2000px; /* Suficiente para cualquier texto */
+  }
+  
+  /* Botón "Leer más" */
+  .btn-expand {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: linear-gradient(to bottom, transparent, #111);
+    color: #8a2a2f;
+    border: none;
+    border-top: 1px dashed #444;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .btn-expand:hover {
+    color: #ff3b3b;
+    background: linear-gradient(to bottom, transparent, #1a0505);
+  }
+  
+  /* Flecha animada */
+  .btn-expand::after {
+    content: " ▼";
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-expand.expanded::after {
+    transform: rotate(180deg);
+    content: " ▲";
+  }
+  
+  /* Ocultar botón en desktop */
+  .btn-expand {
+    display: none;
+  }
+}
+
+/* Mostrar botón solo en móvil */
+@media (max-width: 768px) {
+  .btn-expand {
+    display: block;
+  }
+}
+/* ==================== RESPONSIVE MEJORADO + ACORDEÓN "LEER MÁS" ==================== */
+
+/* Ajustes generales para pantallas medianas y móviles */
+@media (max-width: 1024px) {
+  .book-page, .press-container, .legal-container, .about-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .book-hero {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .book-cover img {
+    max-width: 220px;
+  }
+  
+  .book-info h1 {
+    font-size: 1.6rem;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+  }
+  
+  .excerpt-box, .bonus-section, .bio-box, .character-bio {
+    padding: 1.2rem;
+  }
+}
+/* ==================== ACORDEÓN "LEER MÁS" ==================== */
+@media (max-width: 1024px) {
+  /* Contenedores colapsables */
+  .synopsis.collapsible,
+  .excerpt-box.collapsible,
+  .character-bio.collapsible {
+    max-height: 250px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  /* Cuando está expandido */
+  .synopsis.collapsible.expanded,
+  .excerpt-box.collapsible.expanded,
+  .character-bio.collapsible.expanded {
+    max-height: 5000px; /* Suficiente para cualquier contenido */
+  }
+  
+  /* Botón visible solo en móvil/tablet */
+  .btn-expand {
+    display: block !important;
+    width: 100%;
+    padding: 0.8rem;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #8a2a2f;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-expand:hover {
+    background: #6b1c23;
+    color: #fff;
+  }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 1025px) {
+  .btn-expand {
+    display: none !important;
+  }
+}
