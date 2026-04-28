@@ -99,9 +99,9 @@
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="sobre-mi.html">Sobre Mí</a></li>
       <li><a href="#obras">Obras</a></li>
-      <li><a href="#blog">Blog</a></li>
+     <li><a href="blog.html">Blog</a></li>
       <li><a href="#contacto">Contacto</a></li>
-<li><a href="prensa.html">Kit de Prensa</a>
+<li><a href="prensa.html">Kit de Prensa</a></li>
     </ul>
   </nav>
 
@@ -331,11 +331,46 @@
       </div>
     </section>
 
-    <!-- SECCIÓN BLOG -->
-    <section id="blog">
-      <h2>Blog</h2>
-      <p>Próximamente: reflexiones, avances y más.</p>
-    </section>
+    <!-- BLOG -->
+<section id="blog" class="blog-section">
+  <h2>Blog</h2>
+  <p class="section-intro">Novedades, avances y contenido exclusivo sobre mis libros.</p>
+  
+  <div class="posts-list">
+    
+    <!-- PRIMER POST -->
+    <article class="post-preview">
+      <header class="post-header">
+        <h3>La Sombra del Cuervo ya está disponible | Crónicas de Raven's Ridge #1</h3>
+        <div class="post-meta">
+          <time class="post-date" datetime="2026-04-28">28 de abril, 2026</time>
+          <span class="post-category">Novedades / Lanzamientos</span>
+        </div>
+      </header>
+      
+      <p class="post-excerpt">
+        La preventa ha cerrado. Hoy, La Sombra del Cuervo está oficialmente disponible en Amazon. 
+        Drake Holloway no es un héroe; es un fugitivo, un vigilante moralmente gris que sale de 
+        las sombras solo por venganza…
+      </p>
+      
+      <a href="blog/la-sombra-del-cuervo-ya-disponible.html" class="read-more">
+        Leer artículo completo →
+      </a>
+    </article>
+    
+  </div>
+  
+  <div class="blog-coming-soon">
+    <p><em>Más entradas próximamente... 🖤</em></p>
+  </div>
+  
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="blog.html" class="btn btn-primary">
+      Ver todos los posts del blog
+    </a>
+  </div>
+</section>
 
     <!-- SECCIÓN CONTACTO -->
     <section id="contacto">
@@ -427,153 +462,6 @@
   </div>
 </section>
 
-<style>
-  /* Estilos para Próximos Lanzamientos */
-  .coming-soon-section {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 100%);
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-  }
-  
-  .coming-soon-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .coming-soon-section h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    color: #8a2a2f;
-    text-align: center;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .coming-soon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .coming-soon-card {
-    background: #111;
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .coming-soon-card:hover {
-    border-color: #6b1c23;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(107, 28, 35, 0.3);
-  }
-  
-  .coming-soon-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #6b1c23, #8a2a2f, #6b1c23);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .coming-soon-card:hover::before {
-    opacity: 1;
-  }
-  
-  .coming-soon-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: #222;
-    color: #8a2a2f;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .coming-soon-badge.confidential {
-    background: linear-gradient(135deg, #6b1c23, #8a2a2f);
-    color: #fff;
-    animation: pulse 2s infinite;
-  }
-  
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-  }
-  
-  .coming-soon-card h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0 0 0.25rem;
-  }
-  
-  .coming-soon-title {
-    font-style: italic;
-    color: #8a2a2f;
-    margin: 0 0 1rem;
-    font-size: 1rem;
-  }
-  
-  .coming-soon-desc {
-    color: #bbb;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  
-  .coming-soon-status {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: #1a0505;
-    color: #6b1c23;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-  
-  .secret-project {
-    border-style: dashed;
-    border-color: #6b1c23;
-  }
-  
-  .coming-soon-cta {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px dashed #333;
-  }
-  
-  .coming-soon-cta p {
-    color: #bbb;
-    margin-bottom: 1rem;
-  }
-  
-  .coming-soon-cta .btn {
-    display: inline-block;
-  }
-  
-  @media (max-width: 768px) {
-    .coming-soon-section {
-      padding: 3rem 1rem;
-    }
-    .coming-soon-section h2 {
-      font-size: 1.5rem;
-    }
-  }
-</style>
 <!-- ==================== NEWSLETTER SECTION ==================== -->
     <section id="newsletter" class="newsletter-section">
       <div class="newsletter-container">

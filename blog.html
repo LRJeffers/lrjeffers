@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>Blog | L. R. Jeffers</title>
+  <meta name="description" content="Blog de L. R. Jeffers - Novedades, avances y contenido exclusivo sobre mis libros.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://lrjeffers.github.io/blog.html">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="assets/images/icono.png">
+  <link rel="apple-touch-icon" href="assets/images/icono.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  
+  <!-- BOTÓN DE SONIDO -->
+  <button id="sound-toggle" aria-label="Activar/desactivar sonidos" title="Activar/desactivar sonidos">
+    <span id="sound-icon">🔊</span>
+  </button>
+  
+  <!-- SONIDOS -->
+  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
+  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
+  <audio id="sound-page-load" src="assets/sounds/page-load.mp3" preload="auto"></audio>
+  
+  <!-- NAVEGACIÓN -->
+  <nav aria-label="Navegación principal" class="main-nav">
+    <button id="menu-toggle" aria-expanded="false" aria-controls="menu-list">☰ Menú</button>
+    <ul id="menu-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sobre-mi.html">Sobre Mí</a></li>
+      <li><a href="index.html#obras">Obras</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="prensa.html">Kit de Prensa</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <section class="blog-section">
+      <h2>Blog</h2>
+      <p class="section-intro">Novedades, avances y contenido exclusivo sobre mis libros.</p>
+      
+      <div class="posts-list">
+        
+        <!-- PRIMER POST -->
+        <article class="post-preview">
+          <header class="post-header">
+            <h3>La Sombra del Cuervo ya está disponible | Crónicas de Raven's Ridge #1</h3>
+            <div class="post-meta">
+              <time class="post-date" datetime="2026-04-28">28 de abril, 2026</time>
+              <span class="post-category">Novedades / Lanzamientos</span>
+            </div>
+          </header>
+          
+          <p class="post-excerpt">
+            La preventa ha cerrado. Hoy, La Sombra del Cuervo está oficialmente disponible en Amazon. 
+            Drake Holloway no es un héroe; es un fugitivo, un vigilante moralmente gris que sale de 
+            las sombras solo por venganza…
+          </p>
+          
+          <a href="blog/la-sombra-del-cuervo-ya-disponible.html" class="read-more">
+            Leer artículo completo →
+          </a>
+        </article>
+        
+      </div>
+      
+      <!-- Próximamente más posts -->
+      <div class="blog-coming-soon">
+        <p><em>Más entradas próximamente... 🖤</em></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.facebook.com/LRJeffers1" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lrjeffers90" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.patreon.com/c/LRJeffers90" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://www.tiktok.com/@lrj_90t" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://whatsapp.com/channel/0029Vb7kOJt9Bb5wiQfIgn0q" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.goodreads.com/lrjeffers90" target="_blank" rel="noopener noreferrer">Goodreads</a>
+      </div>
+      
+      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | <a href="privacidad.html" style="color: #6b1c23; text-decoration: none;">Política de Privacidad</a></p>
+      <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
