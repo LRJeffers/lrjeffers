@@ -1,4 +1,4 @@
-/* ==================== MENÚ MÓVIL (SIN SONIDOS) ==================== */
+/* ==================== MENÚ MÓVIL ==================== */
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const menuList = document.getElementById('menu-list');
