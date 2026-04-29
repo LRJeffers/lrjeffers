@@ -503,37 +503,6 @@ input:focus {
   transform: translateY(-2px);
 }
 
-/* ==================== BOTÓN DE SONIDO ==================== */
-#sound-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background: var(--acento);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-#sound-toggle:hover {
-  background: var(--acento-hover);
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px rgba(107, 28, 35, 0.5);
-}
-
-#sound-toggle:focus {
-  outline: 3px solid var(--texto);
-  outline-offset: 3px;
-}
-
 /* ==================== FORMULARIO DE CONTACTO ==================== */
 .contact-intro {
   text-align: center;
@@ -883,14 +852,6 @@ input:focus {
   .breadcrumbs-book {
     font-size: 0.8rem;
   }
-  
-  #sound-toggle {
-    bottom: 10px;
-    right: 10px;
-    width: 45px;
-    height: 45px;
-    font-size: 1.3rem;
-  }
 
   .contact-form-wrapper {
     padding: 2rem 1.5rem;
@@ -1021,6 +982,7 @@ input:focus {
     text-indent: 0;
   }
 }
+
 /* ==================== BLOG ==================== */
 .blog-section {
   padding: 4rem 0;
@@ -1276,6 +1238,7 @@ input:focus {
     padding: 1rem;
   }
 }
+
 /* ==================== PRÓXIMOS LANZAMIENTOS ==================== */
 .coming-soon-section {
   padding: 4rem 2rem;
@@ -1494,6 +1457,7 @@ input:focus {
     width: 100%;
   }
 }
+
 /* ==================== ELIMINAR BOTÓN DE SONIDO ==================== */
 #sound-toggle {
   display: none !important;
