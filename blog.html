@@ -88,21 +88,20 @@
   </main>
 
   <!-- PIE DE PÁGINA -->
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="social-links">
-        <a href="https://www.facebook.com/LRJeffers1" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.instagram.com/lrjeffers90" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.patreon.com/c/LRJeffers90" target="_blank" rel="noopener noreferrer">Patreon</a>
-        <a href="https://www.tiktok.com/@lrj_90t" target="_blank" rel="noopener noreferrer">TikTok</a>
-        <a href="https://whatsapp.com/channel/0029Vb7kOJt9Bb5wiQfIgn0q" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a href="https://www.goodreads.com/lrjeffers90" target="_blank" rel="noopener noreferrer">Goodreads</a>
-      </div>
-      
-      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | <a href="privacidad.html" style="color: #6b1c23; text-decoration: none;">Política de Privacidad</a></p>
-      <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
-    </div>
-  </footer>
+ <footer class="site-footer">
+  <div class="footer-content" id="footer-content">
+    <!-- El footer se cargará aquí automáticamente -->
+  </div>
+</footer>
+
+<script>
+  // Cargar footer dinámicamente
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-content').innerHTML = data;
+    });
+</script>
 
   <!-- SCRIPT -->
   <script src="script.js"></script>
