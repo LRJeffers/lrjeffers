@@ -7,17 +7,14 @@
   <title>Sobre Mí | L. R. Jeffers</title>
   <meta name="description" content="L. R. Jeffers es un escritor queer autodidacta especializado en Romance Paranormal, Dark Romance y Cambiaformas LGBT. Conoce su historia.">
   
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://lrjeffers.github.io/sobre-mi.html">
   
-  <!-- Favicon - Múltiples formatos -->
+  <!-- FAVICONS -->
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" href="assets/images/icono.png">
   <link rel="apple-touch-icon" href="assets/images/icono.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icono.png?v=2">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icono.png?v=2">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Sobre Mí | L. R. Jeffers">
@@ -37,9 +34,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
   
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="styles.css" />
   
-  <!-- ==================== SCHEMA.ORG - DATOS ESTRUCTURADOS ==================== -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,14 +62,12 @@
   </script>
 
   <style>
-    /* Estilos específicos para Sobre Mí */
     .about-container {
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
     }
 
-    /* BREADCRUMBS */
     .breadcrumbs {
       margin-bottom: 1.5rem;
       font-size: 0.9rem;
@@ -175,13 +173,12 @@
       transition: all 0.3s ease;
     }
 
-    .social-btn svg {
+    .social-btn i {
+      font-size: 1.1rem;
       width: 20px;
-      height: 20px;
-      fill: currentColor;
+      text-align: center;
     }
 
-    /* Efecto HOVER ROJO */
     .social-btn:hover {
       background: var(--acento, #6b1c23);
       border-color: #ff0000;
@@ -190,7 +187,6 @@
       transform: translateY(-2px);
     }
 
-    /* === Enlace al Kit de Prensa al final de la bio === */
     .press-cta {
       margin-top: 2.5rem;
       padding-top: 1.5rem;
@@ -240,16 +236,6 @@
 <body>
   <a href="#main" class="skip-link">Saltar al contenido</a>
   
-  <!-- BOTÓN DE SONIDO -->
-  <button id="sound-toggle" aria-label="Activar/desactivar sonidos" title="Activar/desactivar sonidos">
-    <span id="sound-icon">🔊</span>
-  </button>
-  
-  <!-- SONIDOS -->
-  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
-  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
-  <audio id="sound-page-load" src="assets/sounds/page-load.mp3" preload="auto"></audio>
-  
   <!-- BANNER PRINCIPAL -->
   <header class="hero-banner">
     <div class="hero-overlay"></div>
@@ -281,7 +267,7 @@
         <!-- FOTO DE PERFIL -->
         <img src="assets/images/perfil_autor.jpg" alt="L. R. Jeffers - Autor" class="profile-photo">
         
-        <!-- TAGLINE PRINCIPAL EN BEBAS NEUE -->
+        <!-- TAGLINE PRINCIPAL -->
         <h1 class="tagline-principal">
           Escritor queer autodidacta con una debilidad por las historias de amor.
         </h1>
@@ -315,7 +301,7 @@
           </ul>
         </div>
 
-        <!-- === Enlace visible al Kit de Prensa (Opción B) === -->
+        <!-- Enlace al Kit de Prensa -->
         <div class="press-cta">
           <p>¿Eres blogger, podcaster o medio de comunicación?</p>
           <a href="prensa.html">Accede a mi Kit de Prensa →</a>
@@ -323,43 +309,36 @@
 
         <h3 style="text-align: center; margin-top: 3rem;">Sígueme en redes:</h3>
         
-        <!-- BOTONES CON ICONOS SVG -->
+        <!-- BOTONES CON ICONOS FONT AWESOME -->
         <div class="social-buttons">
           
-          <!-- Facebook -->
           <a href="https://www.facebook.com/LRJeffers1" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-            <span>Facebook</span>
+            <i class="fab fa-facebook-f"></i> Facebook
           </a>
 
-          <!-- Instagram -->
           <a href="https://www.instagram.com/lrjeffers90" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            <span>Instagram</span>
+            <i class="fab fa-instagram"></i> Instagram
           </a>
 
-          <!-- Patreon -->
           <a href="https://www.patreon.com/c/LRJeffers90" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <svg viewBox="0 0 24 24"><circle cx="16" cy="12" r="6"></circle><rect x="2" y="6" width="4" height="12"></rect></svg>
-            <span>Patreon</span>
+            <i class="fab fa-patreon"></i> Patreon
           </a>
 
-          <!-- TikTok -->
           <a href="https://www.tiktok.com/@lrj_90t" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
-            <span>TikTok</span>
+            <i class="fab fa-tiktok"></i> TikTok
           </a>
 
-          <!-- WhatsApp -->
           <a href="https://whatsapp.com/channel/0029Vb7kOJt9Bb5wiQfIgn0q" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            <span>WhatsApp</span>
+            <i class="fab fa-whatsapp"></i> WhatsApp
           </a>
 
-          <!-- Goodreads -->
+          <!-- MESSENGER AGREGADO -->
+          <a href="https://m.me/cm/Abb1kFnRjAaxFDW0/" target="_blank" rel="noopener noreferrer" class="social-btn">
+            <i class="fab fa-facebook-messenger"></i> Messenger
+          </a>
+
           <a href="https://www.goodreads.com/lrjeffers90" target="_blank" rel="noopener noreferrer" class="social-btn">
-            <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-            <span>Goodreads</span>
+            <i class="fab fa-goodreads-g"></i> Goodreads
           </a>
 
         </div>
@@ -368,74 +347,38 @@
     </section>
   </main>
 
-  <!-- PIE DE PÁGINA (versión simple) -->
+  <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
     <div class="footer-content">
-      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | 
-         <a href="privacidad.html">Política de Privacidad</a> | 
-         <a href="prensa.html">Kit de Prensa</a>
-      </p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/LRJeffers1" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/lrjeffers90" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.patreon.com/c/LRJeffers90" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-patreon"></i> Patreon
+        </a>
+        <a href="https://www.tiktok.com/@lrj_90t" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-tiktok"></i> TikTok
+        </a>
+        <a href="https://whatsapp.com/channel/0029Vb7kOJt9Bb5wiQfIgn0q" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://m.me/cm/Abb1kFnRjAaxFDW0/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-messenger"></i> Messenger
+        </a>
+        <a href="https://www.goodreads.com/lrjeffers90" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-goodreads-g"></i> Goodreads
+        </a>
+      </div>
+      <p>&copy; 2026 L. R. Jeffers. Todos los derechos reservados. | <a href="privacidad.html" style="color: #6b1c23; text-decoration: none;">Política de Privacidad</a></p>
       <p class="footer-tagline">Escrito con sangre, tinta y mucha masa madre.</p>
     </div>
   </footer>
 
-  <!-- ==================== SCRIPT DE SONIDOS ==================== -->
+  <!-- SCRIPT (solo menú móvil) -->
   <script src="script.js"></script>
-  <script>
-    // Sistema de sonidos específico para esta página
-    document.addEventListener('DOMContentLoaded', () => {
-      const soundHover = document.getElementById('sound-hover');
-      const soundClick = document.getElementById('sound-click');
-      const soundPageLoad = document.getElementById('sound-page-load');
-      const soundToggle = document.getElementById('sound-toggle');
-      const soundIcon = document.getElementById('sound-icon');
-      const menuToggle = document.getElementById('menu-toggle');
-      
-      let soundEnabled = true;
-      
-      // Reproducir sonido de carga de página
-      if (soundPageLoad && soundEnabled) {
-        soundPageLoad.volume = 0.3;
-        soundPageLoad.play().catch(() => {});
-      }
-      
-      // Toggle de sonido
-      soundToggle.addEventListener('click', () => {
-        soundEnabled = !soundEnabled;
-        soundIcon.textContent = soundEnabled ? '🔊' : '🔇';
-        soundToggle.setAttribute('aria-label', soundEnabled ? 'Desactivar sonidos' : 'Activar sonidos');
-      });
-      
-      // Sonidos en botones de redes sociales
-      document.querySelectorAll('.social-btn').forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
-          if (soundEnabled && soundHover) {
-            soundHover.currentTime = 0;
-            soundHover.volume = 0.4;
-            soundHover.play().catch(() => {});
-          }
-        });
-        
-        btn.addEventListener('click', () => {
-          if (soundEnabled && soundClick) {
-            soundClick.currentTime = 0;
-            soundClick.volume = 0.6;
-            soundClick.play().catch(() => {});
-          }
-        });
-      });
-      
-      // Sonido en botón de menú
-      if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-          if (soundEnabled && soundClick) {
-            soundClick.currentTime = 0;
-            soundClick.volume = 0.6;
-            soundClick.play().catch(() => {});
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>
