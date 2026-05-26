@@ -5,32 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <title>¡Bienvenido al Círculo Oscuro! | L. R. Jeffers</title>
-  <meta name="description" content="Gracias por suscribirte al Círculo Oscuro. Pronto recibirás noticias de L. R. Jeffers con avances, novedades y contenido exclusivo.">
+  <meta name="description" content="Gracias por suscribirte al Círculo Oscuro. Pronto recibirás noticias de L. R. Jeffers con avances y contenido exclusivo.">
   
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://lrjeffers.github.io/gracias.html">
-  
-  <!-- Favicon - Múltiples formatos -->
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" href="assets/images/icono.png">
-  <link rel="apple-touch-icon" href="assets/images/icono.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icono.png?v=2">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icono.png?v=2">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="¡Bienvenido al Círculo Oscuro! | L. R. Jeffers">
-  <meta property="og:description" content="Gracias por suscribirte. Pronto recibirás noticias con avances, novedades y contenido exclusivo.">
-  <meta property="og:image" content="https://lrjeffers.github.io/assets/images/banner.png">
-  <meta property="og:url" content="https://lrjeffers.github.io/gracias.html">
-  <meta property="og:type" content="website">
-  
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="¡Bienvenido al Círculo Oscuro! | L. R. Jeffers">
-  <meta name="twitter:description" content="Gracias por suscribirte. Pronto recibirás noticias con avances, novedades y contenido exclusivo.">
-  <meta name="twitter:image" content="https://lrjeffers.github.io/assets/images/banner.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,322 +19,290 @@
   
   <link rel="stylesheet" href="styles.css" />
   
-  <!-- ==================== SCHEMA.ORG - DATOS ESTRUCTURADOS ==================== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "L. R. Jeffers",
-    "url": "https://lrjeffers.github.io/",
-    "image": "https://lrjeffers.github.io/assets/images/perfil_autor.jpg",
-    "description": "L. R. Jeffers (Caracas, 1990) es escritor queer autodidacta especializado en Romance Paranormal, novela erótica y literatura LGBT.",
-    "jobTitle": "Autor de Ficción",
-    "sameAs": [
-      "https://www.amazon.com/author/lrjeffers",
-      "https://www.goodreads.com/lrjeffers90",
-      "https://www.instagram.com/lrjeffers90",
-      "https://www.facebook.com/LRJeffers1",
-      "https://www.patreon.com/c/LRJeffers90",
-      "https://www.tiktok.com/@lrj_90t"
-    ]
-  }
-  </script>
-  
   <style>
-    .gracias-container {
-      max-width: 600px;
-      margin: 4rem auto;
+    /* Estilos específicos para la página de gracias */
+    .thank-you-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 2rem;
+      background: var(--fondo);
+    }
+    
+    .thank-you-container {
       text-align: center;
+      max-width: 600px;
       background: #111;
-      border: 1px solid #333;
+      padding: 3rem;
       border-radius: 8px;
-      box-shadow: 0 10px 40px rgba(107, 28, 35, 0.3);
+      border: 1px solid var(--borde);
     }
     
-    .gracias-container h1 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 2.5rem;
-      color: #6b1c23;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    
-    .gracias-container p {
+    .thank-you-text {
       font-size: 1.1rem;
-      line-height: 1.8;
-      color: #e0e0e0;
       margin-bottom: 2rem;
+      line-height: 1.6;
     }
     
     .share-section {
-      margin-top: 3rem;
+      margin-top: 2rem;
       padding-top: 2rem;
-      border-top: 1px solid #333;
+      border-top: 1px solid var(--borde);
     }
     
-    .share-section h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.2rem;
+    .share-section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .share-text {
       color: #999;
       margin-bottom: 1.5rem;
-      font-weight: 500;
+      font-size: 0.95rem;
     }
     
-    .share-buttons {
+    /* Botones de compartir profesionales */
+    .share-buttons-blog {
       display: flex;
-      gap: 0.75rem;
+      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
     
     .share-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.25rem;
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 6px;
-      color: #e0e0e0;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: white;
       text-decoration: none;
-      font-weight: 500;
-      font-size: 0.9rem;
       transition: all 0.3s ease;
+      border: none;
       cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     
     .share-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transform: translateY(-3px) scale(1.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
     }
     
-    /* WhatsApp - Verde */
-    .whatsapp-btn {
-      background: #25D366;
-      border-color: #25D366;
-      color: #fff;
-    }
-    .whatsapp-btn:hover {
-      background: #128C7E;
-      border-color: #128C7E;
-    }
-    
-    /* X/Twitter - Negro */
-    .twitter-btn {
-      background: #000000;
-      border-color: #000000;
-      color: #fff;
-    }
-    .twitter-btn:hover {
-      background: #1a1a1a;
-      border-color: #1a1a1a;
-    }
-    
-    /* Facebook - Azul */
-    .facebook-btn {
+    .share-btn.facebook {
       background: #1877F2;
-      border-color: #1877F2;
-      color: #fff;
-    }
-    .facebook-btn:hover {
-      background: #166fe5;
-      border-color: #166fe5;
     }
     
-    /* Instagram - Gradiente */
-    .instagram-btn {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-      border: none;
-      color: #fff;
+    .share-btn.facebook:hover {
+      background: #0D65D9;
     }
-    .instagram-btn:hover {
+    
+    .share-btn.twitter {
+      background: #000000;
+    }
+    
+    .share-btn.twitter:hover {
+      background: #333333;
+    }
+    
+    .share-btn.whatsapp {
+      background: #25D366;
+    }
+    
+    .share-btn.whatsapp:hover {
+      background: #128C7E;
+    }
+    
+    .share-btn.telegram {
+      background: #0088cc;
+    }
+    
+    .share-btn.telegram:hover {
+      background: #006699;
+    }
+    
+    .share-btn.instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+    
+    .share-btn.instagram:hover {
       opacity: 0.9;
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     }
     
-    /* Copiar enlace - Borde punteado borgoña */
-    .copy-btn {
-      background: #1a1a1a;
-      border: 1px dashed #6b1c23;
-      color: #e0e0e0;
-    }
-    .copy-btn:hover {
-      background: #222;
-      border-color: #8a2a2f;
-    }
-    .copy-btn.copied {
-      background: #6b1c23;
-      border-color: #6b1c23;
-      border-style: solid;
-      color: #fff;
-    }
-    
-    .back-home {
-      margin-top: 2.5rem;
-      display: inline-block;
-      padding: 1rem 2rem;
-      background: #6b1c23;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
+    .copy-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: transparent;
+      border: 2px solid var(--acento);
+      color: var(--texto);
+      border-radius: 50px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem;
+      cursor: pointer;
       transition: all 0.3s ease;
+      margin-top: 1rem;
     }
     
-    .back-home:hover {
-      background: #8a2a2f;
+    .copy-link-btn:hover {
+      background: var(--acento);
+      color: #fff;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(107, 28, 35, 0.4);
     }
     
-    @media (max-width: 480px) {
-      .gracias-container {
-        margin: 2rem 1rem;
-        padding: 1.5rem;
+    .copy-link-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+    
+    .copy-success {
+      display: none;
+      color: #25D366;
+      font-size: 0.9rem;
+      margin-top: 0.8rem;
+      font-weight: 500;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .copy-success.show {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @media (max-width: 768px) {
+      .share-buttons-blog {
+        gap: 0.8rem;
       }
-      
-      .gracias-container h1 {
-        font-size: 2rem;
-      }
-      
-      .share-buttons {
-        flex-direction: column;
-      }
-      
       .share-btn {
-        width: 100%;
-        justify-content: center;
+        width: 45px;
+        height: 45px;
       }
     }
   </style>
 </head>
 <body>
-  
-  <!-- SONIDOS -->
-  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
-  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
-  <audio id="sound-page-load" src="assets/sounds/page-load.mp3" preload="auto"></audio>
-  
-  <div class="gracias-container">
-    <h1>¡Bienvenido al Círculo Oscuro! 🖤</h1>
-    
-    <p>
-      Gracias por suscribirte. Pronto recibirás noticias mías con avances, novedades y contenido exclusivo.
-    </p>
-    
-    <div class="share-section">
-      <h2>¿Te gusta lo que ves? ¡Corre la voz!</h2>
-      <p style="color: #999; margin-bottom: 1.5rem; font-size: 0.95rem;">
-        Comparte esta página y ayúdame a llegar a más lectores.
+  <main class="thank-you-page">
+    <div class="thank-you-container">
+      <h1>¡Bienvenido al Círculo Oscuro! 🖤</h1>
+      
+      <p class="thank-you-text">
+        Gracias por suscribirte. Pronto recibirás noticias mías con avances, novedades y contenido exclusivo.
       </p>
       
-      <div class="share-buttons">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/?text=Descubre%20el%20mundo%20de%20L.%20R.%20Jeffers%3A%20Romance%20Paranormal%2C%20Dark%20Romance%20y%20Cambiaformas%20LGBT.%20%C2%A1Entra%20al%20C%C3%ADrculo%20Oscuro!%20%F0%9F%96%A4%20https://lrjeffers.github.io/" 
-           class="share-btn whatsapp-btn" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <span>📱</span>
-          <span>WhatsApp</span>
-        </a>
+      <!-- SECCIÓN DE COMPARTIR -->
+      <div class="share-section">
+        <h3>¿Te gusta lo que ves? ¡Corre la voz!</h3>
+        <p class="share-text">Comparte esta página y ayúdame a llegar a más lectores.</p>
         
-        <!-- X/Twitter -->
-        <a href="https://twitter.com/intent/tweet?url=https://lrjeffers.github.io/&text=Descubre%20el%20mundo%20de%20L.%20R.%20Jeffers%3A%20Romance%20Paranormal%2C%20Dark%20Romance%20y%20Cambiaformas%20LGBT.%20%C2%A1Entra%20al%20C%C3%ADrculo%20Oscuro!%20%F0%9F%96%A4" 
-           class="share-btn twitter-btn" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <span>🐦</span>
-          <span>X / Twitter</span>
-        </a>
+        <div class="share-buttons-blog">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://lrjeffers.github.io/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="share-btn facebook" 
+             aria-label="Compartir en Facebook"
+             title="Compartir en Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          
+          <!-- X (Twitter) -->
+          <a href="https://twitter.com/intent/tweet?url=https://lrjeffers.github.io/&text=Descubre%20el%20mundo%20de%20L.%20R.%20Jeffers%3A%20Romance%20Paranormal%2C%20Dark%20Romance%20y%20Cambiaformas%20LGBT.%20%C2%A1Entra%20al%20C%C3%ADrculo%20Oscuro!%20%F0%9F%96%A4" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="share-btn twitter" 
+             aria-label="Compartir en X"
+             title="Compartir en X">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          
+          <!-- WhatsApp -->
+          <a href="https://wa.me/?text=Descubre%20el%20mundo%20de%20L.%20R.%20Jeffers%3A%20Romance%20Paranormal%2C%20Dark%20Romance%20y%20Cambiaformas%20LGBT.%20%C2%A1Entra%20al%20C%C3%ADrculo%20Oscuro!%20%F0%9F%96%A4%20https://lrjeffers.github.io/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="share-btn whatsapp" 
+             aria-label="Compartir en WhatsApp"
+             title="Compartir en WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+          </a>
+          
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/lrjeffers90" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="share-btn instagram" 
+             aria-label="Seguir en Instagram"
+             title="Seguir en Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+        </div>
         
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://lrjeffers.github.io/" 
-           class="share-btn facebook-btn" 
-           target="_blank" 
-           rel="noopener noreferrer">
-          <span>📘</span>
-          <span>Facebook</span>
-        </a>
-        
-        <!-- Instagram -->
-        <button class="share-btn instagram-btn" onclick="window.open('https://www.instagram.com/', '_blank')" aria-label="Compartir en Instagram">
-          <span>📸</span>
-          <span>Instagram</span>
+        <!-- Botón copiar enlace -->
+        <button onclick="copyLink()" class="copy-link-btn" aria-label="Copiar enlace">
+          <svg viewBox="0 0 24 24" width="20" height="20">
+            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+          </svg>
+          <span>Copiar enlace</span>
         </button>
-        
-        <!-- Copiar enlace -->
-        <button class="share-btn copy-btn" id="copyLinkBtn" aria-label="Copiar enlace">
-          <span>📋</span>
-          <span id="copyText">Copiar enlace</span>
-        </button>
+        <div id="copy-success" class="copy-success">✓ ¡Enlace copiado!</div>
+      </div>
+      
+      <div style="margin-top: 2rem;">
+        <a href="index.html" class="btn btn-secondary">
+          ← Volver al Inicio
+        </a>
       </div>
     </div>
-    
-    <a href="index.html" class="back-home">
-      ← Volver al Inicio
-    </a>
-  </div>
-
-  <!-- Script para copiar enlace y sonidos -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const soundHover = document.getElementById('sound-hover');
-      const soundClick = document.getElementById('sound-click');
-      const soundPageLoad = document.getElementById('sound-page-load');
-      
-      let soundEnabled = true;
-      
-      // Reproducir sonido de carga de página
-      if (soundPageLoad && soundEnabled) {
-        soundPageLoad.volume = 0.3;
-        soundPageLoad.play().catch(() => {});
-      }
-      
-      // Sonidos en botones de compartir
-      document.querySelectorAll('.share-btn').forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
-          if (soundEnabled && soundHover) {
-            soundHover.currentTime = 0;
-            soundHover.volume = 0.4;
-            soundHover.play().catch(() => {});
-          }
-        });
-        
-        btn.addEventListener('click', () => {
-          if (soundEnabled && soundClick) {
-            soundClick.currentTime = 0;
-            soundClick.volume = 0.6;
-            soundClick.play().catch(() => {});
-          }
-        });
-      });
-      
-      // Función para copiar enlace
-      const copyBtn = document.getElementById('copyLinkBtn');
-      const copyText = document.getElementById('copyText');
-      
-      if (copyBtn) {
-        copyBtn.addEventListener('click', async () => {
-          const url = window.location.href;
-          
-          try {
-            await navigator.clipboard.writeText(url);
-            copyText.textContent = '¡Enlace copiado!';
-            copyBtn.classList.add('copied');
-            
-            setTimeout(() => {
-              copyText.textContent = 'Copiar enlace';
-              copyBtn.classList.remove('copied');
-            }, 2000);
-          } catch (err) {
-            copyText.textContent = 'Error al copiar';
-            console.error('Error al copiar:', err);
-          }
-        });
-      }
-    });
-  </script>
+  </main>
   
+  <!-- Script para copiar enlace -->
+  <script>
+    function copyLink() {
+      const url = window.location.href;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(showSuccess).catch(fallbackCopy);
+      } else {
+        fallbackCopy(url);
+      }
+    }
+    
+    function fallbackCopy(url) {
+      const textArea = document.createElement('textarea');
+      textArea.value = url;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showSuccess();
+      } catch(e) {}
+      document.body.removeChild(textArea);
+    }
+    
+    function showSuccess() {
+      const el = document.getElementById('copy-success');
+      if(el) {
+        el.classList.add('show');
+        setTimeout(() => el.classList.remove('show'), 3000);
+      }
+    }
+  </script>
 </body>
 </html>
