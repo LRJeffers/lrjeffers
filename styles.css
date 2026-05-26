@@ -1462,3 +1462,144 @@ input:focus {
 #sound-toggle {
   display: none !important;
 }
+/* ==================== BOTONES DE COMPARTIR PROFESIONALES ==================== */
+.share-section-blog {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.share-section-blog h4 {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.share-buttons-blog {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.share-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.share-btn.facebook {
+  background: #1877F2;
+}
+
+.share-btn.facebook:hover {
+  background: #0D65D9;
+}
+
+.share-btn.twitter {
+  background: #000000;
+}
+
+.share-btn.twitter:hover {
+  background: #333333;
+}
+
+.share-btn.whatsapp {
+  background: #25D366;
+}
+
+.share-btn.whatsapp:hover {
+  background: #128C7E;
+}
+
+.share-btn.telegram {
+  background: #0088cc;
+}
+
+.share-btn.telegram:hover {
+  background: #006699;
+}
+
+.share-btn.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.share-btn.instagram:hover {
+  opacity: 0.9;
+}
+
+.copy-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: transparent;
+  border: 2px solid var(--acento);
+  color: var(--texto);
+  border-radius: 50px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.copy-link-btn:hover {
+  background: var(--acento);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 28, 35, 0.4);
+}
+
+.copy-link-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.copy-success {
+  display: none;
+  color: #25D366;
+  font-size: 0.9rem;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+.copy-success.show {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive para botones de compartir */
+@media (max-width: 768px) {
+  .share-buttons-blog {
+    gap: 0.8rem;
+  }
+  .share-btn {
+    width: 45px;
+    height: 45px;
+  }
+}
